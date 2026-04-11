@@ -364,13 +364,13 @@ export default function Page() {
                 <div className="mt-4 rounded-2xl bg-primary p-5 text-primary-foreground">
                   <div className="flex items-start justify-between gap-3">
                     <div>
-                      <p className="text-[12px] text-primary-foreground/75">
+                      <p className="text-[12px] text-primary-foreground/90">
                         Client programs orchestrated
                       </p>
                       <p className="mt-2 font-heading text-[40px] font-semibold leading-none">24</p>
                     </div>
                     <div className="rounded-xl bg-white/10 px-3 py-2 text-right text-[12px]">
-                      <p className="text-primary-foreground/75">Velocity</p>
+                      <p className="text-primary-foreground/90">Velocity</p>
                       <p className="mt-1 font-medium text-accent">+38% faster launches</p>
                     </div>
                   </div>
@@ -714,7 +714,7 @@ export default function Page() {
                 <Button className="h-12 w-full rounded-full bg-accent text-[13px] font-semibold text-accent-foreground hover:bg-accent/90">
                   Download Benchmarking Report
                 </Button>
-                <p className="mt-3 text-center text-[12px] text-primary-foreground/60">
+                <p className="mt-3 text-center text-[12px] text-primary-foreground/80">
                   Free. Anonymized data from 500+ agencies.
                 </p>
               </div>
@@ -791,12 +791,12 @@ export default function Page() {
 
                 <div className="mt-3 flex items-baseline gap-1">
                   <span className="font-heading text-4xl font-semibold">{tier.price}</span>
-                  <span className={`text-sm ${tier.highlight ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                  <span className={`text-sm ${tier.highlight ? "text-primary-foreground/85" : "text-muted-foreground"}`}>
                     {tier.period}
                   </span>
                 </div>
 
-                <p className={`mt-1 text-[13px] ${tier.highlight ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                <p className={`mt-1 text-[13px] ${tier.highlight ? "text-primary-foreground/85" : "text-muted-foreground"}`}>
                   {tier.tagline}
                 </p>
 
@@ -804,7 +804,7 @@ export default function Page() {
                   <p className={`font-medium ${tier.highlight ? "text-primary-foreground" : "text-foreground"}`}>
                     {tier.included}
                   </p>
-                  <p className={`mt-0.5 text-[12px] ${tier.highlight ? "text-primary-foreground/65" : "text-muted-foreground"}`}>
+                  <p className={`mt-0.5 text-[12px] ${tier.highlight ? "text-primary-foreground/80" : "text-foreground/70"}`}>
                     {tier.extra}
                   </p>
                 </div>
@@ -887,7 +887,7 @@ export default function Page() {
                 </p>
                 <h2 className="mt-4 max-w-3xl font-heading text-4xl font-semibold tracking-[-0.02em] text-balance md:text-5xl">
                   Start orchestrating your marketing.
-                  <span className="block text-primary-foreground/60 text-3xl font-normal mt-2">Free for 30 days.</span>
+                  <span className="block text-primary-foreground/75 text-3xl font-normal mt-2">Free for 30 days.</span>
                 </h2>
                 <p className="mt-5 max-w-2xl text-[17px] leading-8 text-primary-foreground/80">
                   500+ agencies stopped scaling with headcount. They didn&apos;t go back. Neither will you.
