@@ -7,13 +7,14 @@ import {
   Clock01Icon,
   ChartDecreaseIcon,
   Recycle01Icon,
-  BotIcon,
+  Search01Icon,
   Brain01Icon,
-  Award01Icon,
+  BrushIcon,
   FlowCircleIcon,
-  Shield01Icon,
   AnalyticsUpIcon,
+  Shield01Icon,
   CheckmarkCircle01Icon,
+  Copy01Icon,
 } from "@hugeicons/core-free-icons"
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -23,7 +24,7 @@ const problems = [
     id: "01",
     Icon: DollarCircleIcon,
     title: "Expensive Scaling",
-    copy: "Each new client requires hiring 3–5 people. That's $200K–300K in annual salary costs before a single dollar of new revenue lands.",
+    copy: "Each new client requires 3–5 new hires. That's $200K–300K in annual salary before a single dollar of new revenue lands.",
   },
   {
     id: "02",
@@ -35,34 +36,46 @@ const problems = [
     id: "03",
     Icon: ChartDecreaseIcon,
     title: "Quality Variance",
-    copy: "Execution depends on who you hired. Senior vs. junior means different results. Your clients shouldn't get inconsistent outcomes.",
+    copy: "Results depend on who you hired. Senior vs. junior means different outcomes. Your clients shouldn't get inconsistent work.",
   },
   {
     id: "04",
     Icon: Recycle01Icon,
     title: "No Institutional Learning",
-    copy: "Each hire starts from scratch. No systematic improvement over time. Year-3 campaigns perform no better than year-1 campaigns.",
+    copy: "Each new hire starts from scratch. No compounding improvement. Year-3 campaigns perform no better than year-1.",
   },
 ]
 
-const solutions = [
+const agentRoles = [
   {
-    Icon: FlowCircleIcon,
-    title: "Agents That Orchestrate",
-    copy: "Dedicated agents for content, strategy, demand gen, and analytics. Each specializes in one role. All work in coordinated precision.",
-    result: "You manage orchestration. Agents handle execution. Same team, unlimited clients.",
+    id: "01",
+    Icon: Search01Icon,
+    role: "Researcher",
+    copy: "Tracks your client's market, competitors, and audience in real time. Every campaign starts with fresh, specific intelligence — not recycled assumptions.",
   },
   {
+    id: "02",
     Icon: Brain01Icon,
-    title: "Agents That Learn",
-    copy: "Every campaign teaches your agents what works. Better copy. Smarter targeting. More conversions—compounding automatically.",
-    result: "Results improve without adding headcount. Month 12 outperforms month 1—always.",
+    role: "Strategist",
+    copy: "Builds and refines campaign strategy based on what works across 500+ agencies. Gets smarter every week. Never plateaus.",
   },
   {
-    Icon: Award01Icon,
-    title: "Consistent Excellence",
-    copy: "Every client receives the same proven methodology. Every campaign follows the same system. Quality is a function of process, not luck.",
-    result: "Predictable results. Retained clients. Scalable operations.",
+    id: "03",
+    Icon: BrushIcon,
+    role: "Creative Director",
+    copy: "Produces and directs content assets aligned to your client's brand and voice. Consistent quality every time — no junior vs. senior variance.",
+  },
+  {
+    id: "04",
+    Icon: FlowCircleIcon,
+    role: "Execution Agent",
+    copy: "Coordinates campaign launch, distribution, and real-time optimization. Works 24/7 — not just during business hours.",
+  },
+  {
+    id: "05",
+    Icon: AnalyticsUpIcon,
+    role: "Analyst",
+    copy: "Measures results, extracts insights, and feeds learnings back to every other agent. Month 6 is always better than month 1.",
   },
 ]
 
@@ -70,77 +83,77 @@ const steps = [
   {
     id: "01",
     title: "Brief",
-    description: "You create a campaign brief—exactly as you always have. No new workflow. No retraining.",
+    description: "You create a campaign brief — exactly as you always have. No new workflow. No retraining your team.",
   },
   {
     id: "02",
-    title: "Orchestrate",
-    description: "Agents coordinate content, strategy, and demand gen in parallel. No meetings. No back-and-forth. No bottlenecks.",
+    title: "Duplicate",
+    description: "Your 5 agents are activated for that client: researcher, strategist, creative director, execution agent, and analyst — all working in parallel.",
   },
   {
     id: "03",
     title: "Execute",
-    description: "Campaigns launch automatically. Agents monitor, optimize, and learn 24/7 as the campaign runs.",
+    description: "Campaigns launch automatically. Agents monitor, optimize, and learn 24/7 as the campaign runs. No back-and-forth. No meetings.",
   },
   {
     id: "04",
-    title: "Results",
-    description: "Campaign metrics surface ROI. Agents extract the signal. Your next campaign starts smarter than the last.",
+    title: "Improve",
+    description: "Campaign metrics surface ROI. Agents extract the signal. Every lesson is shared across your entire duplicated team. Your next campaign starts smarter.",
   },
 ]
 
 const demoFeatures = [
   {
     label: "Configuration",
-    title: "Agent Setup",
-    Icon: BotIcon,
-    capability: "Configure agents, assign to clients, and launch campaigns from a single interface.",
-    benefit: "First campaign live in 30 minutes—not 2 weeks.",
+    title: "Duplicate in 30 Minutes",
+    Icon: Copy01Icon,
+    capability: "Assign your 5 agents to a new client, configure their context, and launch your first campaign — all from a single interface.",
+    benefit: "New client fully onboarded in 30 minutes. Not 3 months.",
   },
   {
     label: "Intelligence",
     title: "Learning Dashboard",
     Icon: AnalyticsUpIcon,
-    capability: "Track exactly how each agent improved across every client account this month.",
-    benefit: "Show clients proof their results are compounding. Not just anecdotes—data.",
+    capability: "Track exactly how each duplicated agent improved across every client account this month.",
+    benefit: "Show clients their results are compounding — not just anecdotes. Data.",
   },
   {
     label: "Community",
     title: "Benchmarking Engine",
     Icon: Shield01Icon,
-    capability: "Compare your performance against 500+ anonymized SaaS agency datasets.",
-    benefit: "Know what's working in SaaS marketing right now—before your competitors do.",
+    capability: "Compare your duplicated team's performance against 500+ anonymized SaaS agency datasets.",
+    benefit: "Know what's working in SaaS marketing right now — before your competitors do.",
   },
 ]
 
 const faqs = [
   {
-    question: "Isn't this just marketing automation?",
+    question: "Is this just marketing automation?",
     answer:
-      "No. Automation handles isolated tasks. Orchestration coordinates agents across content, strategy, demand gen, and analytics—together, in real time. The distinction matters: automation saves clicks, orchestration removes the need for entire hires.",
+      "No. Automation handles isolated tasks. Team duplication means each client gets their own dedicated researcher, strategist, creative director, execution agent, and analyst — all working together. That's a full team, not a few automated tasks.",
   },
   {
-    question: "How long until we see measurable results?",
+    question: "How long does duplication take to show results?",
     answer:
-      "Agents need 4 weeks to calibrate to your style and client context. By week 5, campaign metrics show measurable improvement. Our benchmarking data from 500+ agencies validates this timeline consistently.",
+      "Agents need 4 weeks to calibrate to your style and each client's context. By week 5, campaign metrics show measurable improvement. Our benchmarking data from 500+ agencies validates this timeline consistently.",
   },
   {
     question: "Do we need to restructure our team?",
     answer:
-      "No. Your same team can manage 10+ clients instead of 3. You don't replace people—you multiply what they can do. Most agencies keep their full team and take on more clients.",
+      "No. Your same 5 people can now manage 15 clients instead of 3. You don't replace anyone — you multiply what each person can do. Most agencies keep their full team and take on more clients.",
   },
   {
-    question: "What are the security and compliance standards?",
+    question: "What about data security and compliance?",
     answer:
-      "Enterprise-grade encryption at rest and in transit. GDPR compliant. SOC 2 Type II certified. All benchmarking data is fully anonymized—no agency ever sees another's client data.",
+      "Enterprise-grade encryption at rest and in transit. GDPR compliant. SOC 2 Type II certified. All benchmarking data is fully anonymized — no agency ever sees another's client data.",
   },
   {
     question: "Is there a long-term contract?",
     answer:
-      "No. Month-to-month billing with no lock-in. We don't rely on contracts because agencies that orchestrate don't go back to hiring.",
+      "No. Month-to-month billing with no lock-in. We don't rely on contracts — agencies that duplicate their team don't go back to hiring.",
   },
   {
-    question: "What does it actually cost at scale?",
+    question: "What does it cost at scale?",
     answer:
       "Starter: $500/month (3 clients) + $300/additional. Pro: $1,500/month (10 clients) + $250/additional. At 10 clients that's $3,500/month versus $200K+ in annual salary costs. Average year-one ROI: 10x.",
   },
@@ -155,7 +168,7 @@ const pricingTiers = [
     included: "3 clients included",
     extra: "$300 / mo per additional client",
     features: [
-      "All 4 specialized agents",
+      "All 5 duplicated agent roles",
       "Agent learning dashboard",
       "Community benchmarking",
       "Email support",
@@ -171,7 +184,7 @@ const pricingTiers = [
     included: "10 clients included",
     extra: "$250 / mo per additional client",
     features: [
-      "All 4 specialized agents",
+      "All 5 duplicated agent roles",
       "Advanced learning dashboard",
       "Private benchmarking group",
       "Dedicated account manager",
@@ -210,7 +223,7 @@ export default function Page() {
       <section className="relative overflow-hidden">
         {/* Ambient glow */}
         <div
-          className="pointer-events-none absolute left-1/2 top-0 h-[480px] w-[640px] -translate-x-1/2 -translate-y-1/4 rounded-full blur-[120px] opacity-40"
+          className="pointer-events-none absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 -translate-y-1/3 rounded-full blur-[160px] opacity-30"
           style={{ backgroundColor: "var(--brand-orb)" }}
         />
         {/* Animated shimmer line */}
@@ -233,7 +246,7 @@ export default function Page() {
             </div>
 
             <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
-              <a href="#how-it-works" className="transition-colors hover:text-foreground">How It Works</a>
+              <a href="#duplication" className="transition-colors hover:text-foreground">How It Works</a>
               <a href="#pricing" className="transition-colors hover:text-foreground">Pricing</a>
               <a href="#faq" className="transition-colors hover:text-foreground">FAQ</a>
             </nav>
@@ -252,218 +265,216 @@ export default function Page() {
             </div>
           </header>
 
-          {/* Hero body */}
-          <div className="grid items-start gap-12 py-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14 lg:py-16">
-            <div className="max-w-3xl">
+          {/* Hero body — one focus, centered */}
+          <div className="flex flex-col items-center pb-20 pt-12 text-center lg:pb-28 lg:pt-16">
 
-              {/* Badge */}
-              <AnimateIn>
-                <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-brand-surface px-4 py-1.5 text-[13px] text-muted-foreground shadow-brand">
-                  <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-accent" />
-                  The operating system for B2B SaaS marketing agencies
-                </div>
-              </AnimateIn>
+            {/* Badge */}
+            <AnimateIn>
+              <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-brand-surface px-4 py-1.5 text-[13px] text-muted-foreground shadow-brand">
+                <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-accent" />
+                Team duplication for SaaS marketing agencies
+              </div>
+            </AnimateIn>
 
-              {/* Headline */}
-              <AnimateIn delay={80}>
-                <h1 className="mt-5 font-heading text-5xl font-semibold leading-[1.03] tracking-[-0.02em] text-balance text-foreground md:text-6xl lg:text-[68px]">
-                  Stop scaling with headcount.{" "}
-                  <span className="text-accent">
-                    Start orchestrating with agents.
-                  </span>
-                </h1>
-              </AnimateIn>
+            {/* Headline */}
+            <AnimateIn delay={80}>
+              <h1 className="mt-6 max-w-4xl font-heading text-5xl font-semibold leading-[1.04] tracking-[-0.02em] text-balance text-foreground md:text-6xl lg:text-[72px]">
+                Stop hiring for every client.{" "}
+                <span className="text-accent">Duplicate your team instead.</span>
+              </h1>
+            </AnimateIn>
 
-              {/* Sub */}
-              <AnimateIn delay={160}>
-                <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
-                  Manage 10+ SaaS clients with the same 5-person team. Your agents
-                  orchestrate the execution. You focus on client relationships.
-                  Both improve with every campaign.
+            {/* Sub — one sentence */}
+            <AnimateIn delay={160}>
+              <p className="mt-5 max-w-[50ch] text-[17px] leading-7 text-muted-foreground">
+                Your 5-person team runs every client. Same salary cost. Zero new hires.
+              </p>
+            </AnimateIn>
+
+            {/* Single CTA */}
+            <AnimateIn delay={220}>
+              <div className="mt-8 flex flex-col items-center gap-3">
+                <Button className="h-12 rounded-full bg-accent px-9 text-[14px] font-semibold text-accent-foreground shadow-brand-strong hover:bg-accent/90">
+                  Start Duplicating Free
+                </Button>
+                <p className="text-[12px] text-muted-foreground">
+                  500+ agencies · No credit card required
                 </p>
-              </AnimateIn>
-
-              {/* CTAs */}
-              <AnimateIn delay={220}>
-                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                  <Button className="h-12 rounded-full px-7 text-base shadow-brand-strong">
-                    Start Orchestrating Free
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="h-12 rounded-full border-border/70 bg-brand-surface px-7 text-base text-foreground hover:bg-brand-surface-strong"
-                  >
-                    Watch 2-Minute Demo
-                  </Button>
-                </div>
-              </AnimateIn>
-
-              <AnimateIn delay={280}>
-                <div className="mt-7 md:hidden"><ThemeToggle /></div>
-              </AnimateIn>
-
-              {/* Trust pills */}
-              <AnimateIn delay={300}>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {[
-                    "✓ 500+ agencies",
-                    "✓ 10,000+ campaigns managed",
-                    "✓ No credit card required",
-                  ].map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-full border border-border/60 bg-brand-surface px-3 py-1 text-[13px] text-muted-foreground"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </AnimateIn>
-
-              {/* Stat cards */}
-              <div className="mt-9 grid gap-3 sm:grid-cols-3">
-                {[
-                  { value: "500+", label: "agencies orchestrating" },
-                  { value: "10K+", label: "campaigns managed" },
-                  { value: "$2B+", label: "budget orchestrated" },
-                ].map((m, i) => (
-                  <AnimateIn key={m.label} delay={360 + i * 70}>
-                    <div className="rounded-2xl border border-border/70 bg-brand-surface p-5 shadow-brand card-hover">
-                      <p className="font-heading text-3xl font-semibold tracking-tight text-foreground">
-                        <span className="animate-count" style={{ animationDelay: `${0.5 + i * 0.1}s` }}>
-                          {m.value}
-                        </span>
-                      </p>
-                      <p className="mt-1.5 text-[13px] text-muted-foreground">{m.label}</p>
-                    </div>
-                  </AnimateIn>
-                ))}
               </div>
-            </div>
+            </AnimateIn>
 
-            {/* ── Dashboard mockup ── */}
-            <AnimateIn delay={120} className="lg:sticky lg:top-6">
-              <div className="rounded-[1.75rem] border border-border/70 bg-brand-panel p-5 shadow-brand-strong backdrop-blur">
-                {/* Header */}
-                <div className="flex items-center justify-between border-b border-border/60 pb-4">
-                  <div>
-                    <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-                      Live Control Room
-                    </p>
-                    <h2 className="mt-1 font-heading text-xl font-semibold text-foreground">
-                      Agency harmony in motion
-                    </h2>
-                  </div>
-                  <span className="flex items-center gap-1.5 rounded-full border border-border/60 bg-brand-surface px-3 py-1 text-[12px] text-muted-foreground">
-                    <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-accent" />
-                    Live
-                  </span>
-                </div>
-
-                {/* Primary metric */}
-                <div className="mt-4 rounded-2xl bg-primary p-5 text-primary-foreground">
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <p className="text-[12px] text-primary-foreground/90">
-                        Client programs orchestrated
-                      </p>
-                      <p className="mt-2 font-heading text-[40px] font-semibold leading-none">24</p>
-                    </div>
-                    <div className="rounded-xl bg-white/10 px-3 py-2 text-right text-[12px]">
-                      <p className="text-primary-foreground/90">Velocity</p>
-                      <p className="mt-1 font-medium text-accent">+38% faster launches</p>
-                    </div>
-                  </div>
-                  <div className="mt-5 h-1.5 rounded-full bg-white/10">
-                    <div
-                      className="animate-bar h-1.5 rounded-full bg-accent"
-                      style={{ "--bar-to": "78%" } as React.CSSProperties}
-                    />
-                  </div>
-                </div>
-
-                {/* 2-col grid */}
-                <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                  {/* Agent roster */}
-                  <div className="rounded-2xl border border-border/60 bg-brand-surface p-4">
-                    <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
-                      Active Ensemble
-                    </p>
-                    <div className="mt-3 space-y-2.5">
-                      {["Strategist", "Demand Gen", "Content Lead", "Analyst"].map((role) => (
-                        <div key={role} className="flex items-center justify-between">
-                          <span className="text-[13px] font-medium text-foreground">{role}</span>
-                          <span className="rounded-full border border-border/60 bg-brand-surface-strong px-2 py-0.5 text-[11px] text-muted-foreground">
-                            Active
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Benchmark pulse */}
-                  <div className="rounded-2xl border border-border/60 bg-brand-surface p-4">
-                    <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
-                      Benchmark Pulse
-                    </p>
-                    <div className="mt-3 space-y-3">
-                      {[
-                        { label: "Pipeline efficiency", pct: "92%", to: "92%" },
-                        { label: "Report consistency", pct: "96%", to: "96%" },
-                      ].map((item) => (
-                        <div key={item.label}>
-                          <div className="mb-1.5 flex items-center justify-between text-[12px]">
-                            <span className="text-foreground/80">{item.label}</span>
-                            <span className="font-semibold text-foreground">{item.pct}</span>
-                          </div>
-                          <div className="h-1.5 rounded-full bg-muted">
-                            <div
-                              className="animate-bar h-1.5 rounded-full bg-foreground/30"
-                              style={{ "--bar-to": item.to } as React.CSSProperties}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Week loop */}
-                <div className="mt-3 rounded-2xl border border-border/60 bg-brand-surface p-4">
-                  <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
-                    This Week&apos;s Loop
+            {/* The Equation — the single visual hook */}
+            <AnimateIn delay={320}>
+              <div className="mt-16 flex items-end justify-center gap-5 md:gap-9">
+                <div className="flex flex-col items-center gap-3">
+                  <p className="font-heading text-[76px] font-semibold leading-none tracking-[-0.025em] text-foreground md:text-[100px]">
+                    5
                   </p>
-                  <p className="mt-1.5 text-[13px] font-medium text-foreground">
-                    Strategy, assets, and reporting aligned in one rhythm
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+                    Your team
                   </p>
-                  <div className="mt-3 grid grid-cols-3 gap-2">
-                    {["Briefs composed", "Assets approved", "Insights returned"].map((item) => (
-                      <div
-                        key={item}
-                        className="rounded-xl bg-secondary px-3 py-2 text-center text-[11px] text-secondary-foreground"
-                      >
-                        {item}
-                      </div>
-                    ))}
-                  </div>
+                </div>
+
+                <p className="mb-12 font-heading text-[56px] font-light leading-none text-muted-foreground/20 md:text-[72px]">×</p>
+
+                <div className="flex flex-col items-center gap-3">
+                  <p className="font-heading text-[76px] font-semibold leading-none tracking-[-0.025em] text-accent md:text-[100px]">
+                    <span className="animate-count" style={{ animationDelay: "0.35s" }}>12</span>
+                  </p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+                    Clients
+                  </p>
+                </div>
+
+                <p className="mb-12 font-heading text-[56px] font-light leading-none text-muted-foreground/20 md:text-[72px]">=</p>
+
+                <div className="flex flex-col items-center gap-3">
+                  <p className="font-heading text-[76px] font-semibold leading-none tracking-[-0.025em] text-foreground md:text-[100px]">
+                    <span className="animate-count" style={{ animationDelay: "0.5s" }}>60</span>
+                  </p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+                    Active agents
+                  </p>
                 </div>
               </div>
+
+              <div className="mt-5 flex items-center justify-center gap-3">
+                <span className="h-px w-10 bg-border/60" />
+                <p className="text-[12px] text-muted-foreground/60">Same 5 people. Zero new hires.</p>
+                <span className="h-px w-10 bg-border/60" />
+              </div>
+            </AnimateIn>
+
+            <AnimateIn delay={280}>
+              <div className="mt-8 md:hidden"><ThemeToggle /></div>
             </AnimateIn>
           </div>
         </div>
       </section>
 
-      {/* ── PROBLEM ──────────────────────────────────────────────── */}
+      {/* ── PRODUCT PREVIEW ──────────────────────────────────────── */}
+      <section className="mx-auto max-w-4xl px-6 pb-20 md:px-10 lg:px-12">
+        <AnimateIn>
+          <p className="mb-5 text-center text-[11px] font-semibold uppercase tracking-[0.32em] text-accent">
+            Live Dashboard
+          </p>
+          <div className="rounded-[1.75rem] border border-border/70 bg-brand-panel p-5 shadow-brand-strong backdrop-blur">
+            {/* Header */}
+            <div className="flex items-center justify-between border-b border-border/60 pb-4">
+              <div>
+                <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
+                  Team Duplication Dashboard
+                </p>
+                <h2 className="mt-1 font-heading text-xl font-semibold text-foreground">
+                  12 clients. 60 active agents.
+                </h2>
+              </div>
+              <span className="flex items-center gap-1.5 rounded-full border border-border/60 bg-brand-surface px-3 py-1 text-[12px] text-muted-foreground">
+                <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-accent" />
+                Live
+              </span>
+            </div>
+
+            {/* Primary metric */}
+            <div className="mt-4 rounded-2xl bg-primary p-5 text-primary-foreground">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-[12px] text-primary-foreground/90">Active dedicated agents</p>
+                  <p className="mt-2 font-heading text-[40px] font-semibold leading-none">60</p>
+                  <p className="mt-1 text-[11px] text-primary-foreground/70">5 agents × 12 clients</p>
+                </div>
+                <div className="rounded-xl bg-white/10 px-3 py-2 text-right text-[12px]">
+                  <p className="text-primary-foreground/90">Your team size</p>
+                  <p className="mt-1 font-medium text-accent">Still 5 people</p>
+                </div>
+              </div>
+              <div className="mt-5 h-1.5 rounded-full bg-white/10">
+                <div
+                  className="animate-bar h-1.5 rounded-full bg-accent"
+                  style={{ "--bar-to": "100%" } as React.CSSProperties}
+                />
+              </div>
+            </div>
+
+            {/* 2-col grid */}
+            <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-2xl border border-border/60 bg-brand-surface p-4">
+                <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                  Duplicated Roles
+                </p>
+                <div className="mt-3 space-y-2.5">
+                  {["Researcher", "Strategist", "Creative Dir.", "Execution", "Analyst"].map((role) => (
+                    <div key={role} className="flex items-center justify-between">
+                      <span className="text-[13px] font-medium text-foreground">{role}</span>
+                      <span className="rounded-full border border-border/60 bg-brand-surface-strong px-2 py-0.5 text-[11px] font-medium text-accent">
+                        ×12
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-border/60 bg-brand-surface p-4">
+                <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                  Learning Progress
+                </p>
+                <div className="mt-3 space-y-3">
+                  {[
+                    { label: "Campaign quality", pct: "94%", to: "94%" },
+                    { label: "Margin vs. month 1", pct: "+47%", to: "78%" },
+                  ].map((item) => (
+                    <div key={item.label}>
+                      <div className="mb-1.5 flex items-center justify-between text-[12px]">
+                        <span className="text-foreground/80">{item.label}</span>
+                        <span className="font-semibold text-foreground">{item.pct}</span>
+                      </div>
+                      <div className="h-1.5 rounded-full bg-muted">
+                        <div
+                          className="animate-bar h-1.5 rounded-full bg-accent/60"
+                          style={{ "--bar-to": item.to } as React.CSSProperties}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Month summary */}
+            <div className="mt-3 rounded-2xl border border-border/60 bg-brand-surface p-4">
+              <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                This Month
+              </p>
+              <p className="mt-1.5 text-[13px] font-medium text-foreground">
+                3 new clients added. 0 new hires. Margin up 12%.
+              </p>
+              <div className="mt-3 grid grid-cols-3 gap-2">
+                {["3 new clients", "0 new hires", "+12% margin"].map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-xl bg-secondary px-3 py-2 text-center text-[11px] text-secondary-foreground"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </AnimateIn>
+      </section>
+
+      {/* ── THE HIRING TRAP ───────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-28">
         <AnimateIn className="text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-accent">
-            The Agency Problem
+            The Hiring Trap
           </p>
           <h2 className="mt-4 font-heading text-4xl font-semibold tracking-[-0.015em] text-balance text-foreground md:text-5xl">
-            Most agencies are stuck.
+            You can&rsquo;t scale without hiring.
+            <span className="block text-muted-foreground font-normal">Until now.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
-            The traditional model breaks at scale. Every new client triggers another expensive, slow hiring cycle.
+            Every new client triggers another expensive, slow hiring cycle. The traditional model breaks margins at scale.
           </p>
         </AnimateIn>
 
@@ -488,53 +499,84 @@ export default function Page() {
 
         <AnimateIn delay={360} className="mt-14 text-center">
           <p className="mx-auto max-w-lg font-heading text-xl font-semibold text-foreground">
-            You need a better model.{" "}
-            <span className="font-normal text-muted-foreground">Not better tools — a different operating model.</span>
+            You need a different model.{" "}
+            <span className="font-normal text-muted-foreground">Not better tools — a fundamentally different model.</span>
           </p>
         </AnimateIn>
       </section>
 
-      {/* ── SOLUTION ─────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-28">
+      {/* ── TEAM DUPLICATION MODEL ────────────────────────────────── */}
+      <section id="duplication" className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-28">
         <AnimateIn className="text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-accent">
-            The Orchestration Model
+            Team Duplication
           </p>
           <h2 className="mt-4 font-heading text-4xl font-semibold tracking-[-0.015em] text-balance text-foreground md:text-5xl">
-            Instead of scaling with people,
-            <span className="block">scale with orchestration.</span>
+            Clone your best people for every client.
           </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            Instead of one team stretched across all clients, each client gets their own dedicated team of 5. All learning together across 500+ agencies.
+          </p>
         </AnimateIn>
 
-        <div className="mt-14 grid gap-5 lg:grid-cols-3">
-          {solutions.map((s, i) => (
-            <AnimateIn key={s.title} delay={i * 100}>
-              <article className="card-hover flex h-full flex-col rounded-[1.5rem] border border-border/70 bg-brand-surface p-7 shadow-brand">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl border border-border/60 bg-background text-foreground">
-                  <HugeiconsIcon icon={s.Icon} size={22} strokeWidth={1.5} />
+        {/* 5 agent role cards */}
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          {agentRoles.map((a, i) => (
+            <AnimateIn key={a.id} delay={i * 80}>
+              <article className="card-hover flex h-full flex-col rounded-[1.5rem] border border-border/70 bg-brand-surface p-6 shadow-brand">
+                <div className="mb-4 flex items-start justify-between">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/60 bg-background text-foreground">
+                    <HugeiconsIcon icon={a.Icon} size={20} strokeWidth={1.5} />
+                  </div>
+                  <span className="font-heading text-4xl font-semibold tracking-tight text-foreground/8">
+                    {a.id}
+                  </span>
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground">{s.title}</h3>
-                <p className="mt-3 flex-1 text-[13px] leading-6 text-muted-foreground">{s.copy}</p>
-                <div className="mt-6 border-t border-border/50 pt-5">
-                  <p className="text-[13px] text-foreground/80">
-                    <span className="font-semibold text-accent">Result — </span>
-                    {s.result}
-                  </p>
-                </div>
+                <h3 className="font-heading text-base font-semibold text-foreground">{a.role}</h3>
+                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
+                  Duplicated for every client
+                </p>
+                <p className="mt-3 flex-1 text-[13px] leading-6 text-muted-foreground">{a.copy}</p>
               </article>
             </AnimateIn>
           ))}
         </div>
 
-        <AnimateIn delay={320} className="mt-14 text-center">
-          <p className="font-heading text-2xl font-semibold text-foreground">
-            Same team. 10 clients. Better margins. Better results.
-          </p>
+        {/* The math — navy callout */}
+        <AnimateIn delay={440}>
+          <div className="mt-8 rounded-[1.5rem] bg-primary px-8 py-10 text-primary-foreground shadow-brand-strong">
+            <div className="grid items-center gap-6 text-center md:grid-cols-3 md:gap-0">
+              <div>
+                <p className="font-heading text-6xl font-semibold leading-none">5</p>
+                <p className="mt-3 text-[14px] text-primary-foreground/80">people on your team</p>
+              </div>
+              <div className="hidden items-center justify-center md:flex">
+                <div className="flex flex-col items-center gap-2">
+                  <span className="font-heading text-5xl font-semibold text-accent">×12</span>
+                  <p className="text-[13px] text-primary-foreground/70">clients you serve</p>
+                </div>
+              </div>
+              <div className="md:hidden">
+                <p className="font-heading text-5xl font-semibold text-accent">×12 clients</p>
+              </div>
+              <div>
+                <p className="font-heading text-6xl font-semibold leading-none">60</p>
+                <p className="mt-3 text-[14px] text-primary-foreground/80">dedicated team members active</p>
+              </div>
+            </div>
+            <div className="mt-8 border-t border-white/10 pt-6 text-center">
+              <p className="text-[16px] font-semibold text-primary-foreground/90">
+                Same 5 people. Same salary cost.{" "}
+                <span className="text-accent">Zero new hires.</span>{" "}
+                Margin up 35% → 55%+.
+              </p>
+            </div>
+          </div>
         </AnimateIn>
       </section>
 
-      {/* ── HOW IT WORKS ─────────────────────────────────────────── */}
-      <section id="how-it-works" className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-28">
+      {/* ── HOW DUPLICATION WORKS ─────────────────────────────────── */}
+      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-28">
         <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <AnimateIn className="lg:sticky lg:top-24 lg:self-start">
             <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-accent">
@@ -544,11 +586,11 @@ export default function Page() {
               Campaign brief to results. Four steps.
             </h2>
             <p className="mt-5 text-lg leading-8 text-muted-foreground">
-              No new workflows. No retraining. The same briefing process your team already uses — with orchestration running underneath.
+              No new workflows. No retraining. The same briefing process your team already uses — with a full duplicated team running underneath.
             </p>
             <div className="mt-8">
               <Button className="h-12 rounded-full px-7 text-base shadow-brand-strong">
-                Start Orchestrating Free
+                Start Duplicating Free
               </Button>
             </div>
           </AnimateIn>
@@ -575,14 +617,14 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ── PRODUCT DEMO ─────────────────────────────────────────── */}
+      {/* ── PLATFORM OVERVIEW ─────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-28">
         <AnimateIn className="text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-accent">
             Platform Overview
           </p>
           <h2 className="mt-4 font-heading text-4xl font-semibold tracking-[-0.015em] text-balance text-foreground md:text-5xl">
-            Everything you need. Nothing you don&apos;t.
+            Everything your duplicated team needs.
           </h2>
         </AnimateIn>
 
@@ -593,7 +635,7 @@ export default function Page() {
                 {/* Video placeholder */}
                 <div className="relative flex h-44 items-center justify-center border-b border-border/60 bg-secondary/40">
                   <div className="flex h-14 w-14 items-center justify-center rounded-full border border-border/60 bg-background shadow-brand">
-                    <svg className="ml-0.5 h-5 w-5 text-foreground" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="ml-0.5 h-5 w-5 text-foreground" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                       <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
                     </svg>
                   </div>
@@ -628,7 +670,7 @@ export default function Page() {
             Agency Wins
           </p>
           <h2 className="mt-4 font-heading text-4xl font-semibold tracking-[-0.015em] text-balance text-foreground md:text-5xl">
-            Scaling without hiring. Proven.
+            Duplicate your team. Proven results.
           </h2>
         </AnimateIn>
 
@@ -643,8 +685,8 @@ export default function Page() {
               <h3 className="mt-6 font-heading text-3xl font-semibold text-foreground">
                 3 → 10 clients.
               </h3>
-              <p className="mt-1 font-heading text-xl text-muted-foreground font-normal">
-                Same 5-person team.
+              <p className="mt-1 font-heading text-xl font-normal text-muted-foreground">
+                Same 5-person team. Zero new hires.
               </p>
 
               <div className="mt-7 grid grid-cols-2 gap-3">
@@ -669,7 +711,7 @@ export default function Page() {
 
               <blockquote className="mt-8 border-l-2 border-accent pl-5">
                 <p className="text-[15px] leading-7 text-foreground">
-                  &ldquo;We kept our team at 5, added 7 new clients, grew revenue 3x, and didn&apos;t sacrifice quality. Orchestrate removed the ceiling.&rdquo;
+                  &ldquo;We went from 3 to 10 clients without hiring anyone. Same 5-person team. Revenue went from $500K to $1.5M. Margin from 35% to 52%. That&rsquo;s the power of duplication.&rdquo;
                 </p>
                 <cite className="mt-3 block text-[13px] not-italic text-muted-foreground">
                   — Sarah, Founder · GrowthLab Agency
@@ -694,14 +736,14 @@ export default function Page() {
                 Community Results
               </p>
               <h3 className="mt-4 font-heading text-3xl font-semibold">
-                500+ agencies. 10,000+ campaigns. Proven results.
+                500+ agencies duplicating their teams. Proven.
               </h3>
 
               <div className="mt-8 flex-1 space-y-3">
                 {[
                   { stat: "7 → 15", label: "Average client growth per agency" },
                   { stat: "40%", label: "Average margin improvement" },
-                  { stat: "$2B+", label: "Total budget orchestrated" },
+                  { stat: "$2B+", label: "Total budget managed by duplicated teams" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-4 rounded-xl bg-white/8 px-5 py-4">
                     <span className="font-heading text-2xl font-semibold text-accent">{item.stat}</span>
@@ -721,6 +763,40 @@ export default function Page() {
             </div>
           </AnimateIn>
         </div>
+
+        {/* Testimonial row */}
+        <AnimateIn delay={240} className="mt-5">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                quote: "Each client now has their own researcher, strategist, and creative director. We didn't hire anyone. We just duplicated.",
+                name: "Marcus T.",
+                title: "Founder · Focal Agency",
+              },
+              {
+                quote: "Revenue went from $1.5M to $7.5M. Our salary costs stayed the same. Month 6 results are nothing like month 1.",
+                name: "Priya K.",
+                title: "CEO · Demand Works",
+              },
+              {
+                quote: "The magic moment is when you realize your researcher is now researching for 12 clients at once. All learning together.",
+                name: "James L.",
+                title: "Partner · SaaS Campaigns Co.",
+              },
+            ].map((t) => (
+              <blockquote
+                key={t.name}
+                className="card-hover rounded-[1.5rem] border border-border/70 bg-brand-surface p-6 shadow-brand"
+              >
+                <p className="text-[14px] leading-7 text-foreground">&ldquo;{t.quote}&rdquo;</p>
+                <footer className="mt-4">
+                  <p className="text-[13px] font-semibold text-foreground">{t.name}</p>
+                  <p className="mt-0.5 text-[12px] text-muted-foreground">{t.title}</p>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+        </AnimateIn>
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────────── */}
@@ -741,7 +817,7 @@ export default function Page() {
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-foreground">
                   <span className="font-heading text-[17px] font-semibold">{faq.question}</span>
                   <span className="ml-4 shrink-0 rounded-full border border-border/60 p-1.5 text-muted-foreground transition-transform duration-300 group-open:rotate-180">
-                    <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </span>
@@ -760,7 +836,7 @@ export default function Page() {
             Pricing
           </p>
           <h2 className="mt-4 font-heading text-4xl font-semibold tracking-[-0.015em] text-balance text-foreground md:text-5xl">
-            Simple. Based on clients you manage.
+            Simple. Based on clients you duplicate for.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
             Not seats. Not users. You pay for what drives your revenue.
@@ -785,7 +861,7 @@ export default function Page() {
                   </div>
                 )}
 
-                <p className={`text-[11px] font-semibold uppercase tracking-[0.25em] ${tier.highlight ? "text-accent" : "text-accent"}`}>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-accent">
                   {tier.name}
                 </p>
 
@@ -816,7 +892,8 @@ export default function Page() {
                         icon={CheckmarkCircle01Icon}
                         size={16}
                         strokeWidth={1.5}
-                        className={`mt-0.5 shrink-0 ${tier.highlight ? "text-accent" : "text-accent"}`}
+                        className="mt-0.5 shrink-0 text-accent"
+                        aria-hidden="true"
                       />
                       <span className={tier.highlight ? "text-primary-foreground/85" : "text-muted-foreground"}>
                         {f}
@@ -886,17 +963,17 @@ export default function Page() {
                   Ready to stop hiring?
                 </p>
                 <h2 className="mt-4 max-w-3xl font-heading text-4xl font-semibold tracking-[-0.02em] text-balance md:text-5xl">
-                  Start orchestrating your marketing.
-                  <span className="block text-primary-foreground/75 text-3xl font-normal mt-2">Free for 30 days.</span>
+                  Duplicate your team. Serve every client at full strength.
+                  <span className="mt-2 block text-3xl font-normal text-primary-foreground/75">Free for 30 days.</span>
                 </h2>
                 <p className="mt-5 max-w-2xl text-[17px] leading-8 text-primary-foreground/80">
-                  500+ agencies stopped scaling with headcount. They didn&apos;t go back. Neither will you.
+                  500+ agencies went from 7 to 15 clients with the same 5-person team. Same salary cost. Better margins. Better results.
                 </p>
                 <div className="mt-7 flex flex-wrap gap-2.5">
                   {[
                     "30-day free trial",
                     "No credit card required",
-                    "All features included",
+                    "All 5 agent roles included",
                     "Personal onboarding",
                     "Benchmarking data",
                   ].map((t) => (
@@ -945,7 +1022,7 @@ export default function Page() {
                 </div>
               </div>
               <p className="mt-4 max-w-xs text-[13px] leading-6 text-muted-foreground">
-                The operating system for B2B SaaS marketing agencies. Stop managing chaos. Start orchestrating harmony.
+                Team duplication for SaaS marketing agencies. Same 5 people. Unlimited clients. No new hires.
               </p>
               <div className="mt-5 flex gap-2">
                 {["Twitter / X", "LinkedIn"].map((p) => (
@@ -961,7 +1038,7 @@ export default function Page() {
             </div>
 
             {[
-              { heading: "Product", links: ["How It Works", "Features", "Pricing", "Demo"] },
+              { heading: "Product", links: ["How It Works", "Team Duplication", "Pricing", "Demo"] },
               { heading: "Company", links: ["About", "Blog", "Careers", "Press"] },
               { heading: "Support", links: ["Docs", "FAQ", "Contact", "Status"] },
             ].map((col) => (
@@ -984,7 +1061,7 @@ export default function Page() {
 
           <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border/40 pt-6 sm:flex-row sm:items-center">
             <p className="text-[12px] text-muted-foreground">
-              © 2025 Orchestrate.marketing. All rights reserved.
+              © 2026 Orchestrate.marketing. All rights reserved.
             </p>
             <div className="flex gap-5 text-[12px] text-muted-foreground">
               {["Privacy", "Terms", "Cookie Policy"].map((l) => (
